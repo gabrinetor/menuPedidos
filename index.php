@@ -10,15 +10,13 @@
 
 	<body>
 
-		<!-- Fim Menu Fixo -->
-
 		<div class="page">
 
     	  <div class="imagem-col col">
             <div class="papelparede middle">
             <div class="newsletter middle"></div>
               <h1 class="boton">Conheça nosso Cardapio</h1><br>
-            <!--<input class="newsletter-btn" onclick="document.location.href='menu/index.php'" type="button" value="Faça seu Pedido"></div>-->
+            <input class="newsletter-btn" onclick="document.location.href='menu/index.php'" type="button" value="Faça seu Pedido"></div>
             </div>
           </div>
           
