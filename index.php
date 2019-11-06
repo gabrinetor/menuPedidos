@@ -16,9 +16,9 @@
 
     	  <div class="imagem-col col">
             <div class="papelparede middle">
-            <div class="newsletter middle">
-              <h1 class="boton">Conheça nosso Menu</h1><br>
-            <input class="newsletter-btn" onclick="document.location.href='menu/index.php'" type="button" value="Faça seu Pedido"></div>
+            <div class="newsletter middle"></div>
+              <h1 class="boton">Conheça nosso Cardapio</h1><br>
+            <!--<input class="newsletter-btn" onclick="document.location.href='menu/index.php'" type="button" value="Faça seu Pedido"></div>-->
             </div>
           </div>
           
@@ -31,8 +31,8 @@
             <form action="validar_acesso.php" method="POST" id="formLogin">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Senha">
-                <input class="newsletter-btn" type="button" value="Login">
-                <button type="submit" class="btnn botao-info" name="btnn-entrar">Login</button>
+                <input type="button" value="Vagas Disponíveis" class="btnn-entrar" data-link="menu/index.php" data-width="950" data-height="Tot" data-title="Vagas Disponíveis">
+                <button type="submit" class="btnn botao-info" name="btnn-entrar" >Login</button>
                 <br /><br />
             </form>
 

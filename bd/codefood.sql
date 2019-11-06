@@ -62,6 +62,72 @@ ALTER TABLE `clientes`
   MODIFY `id_cli` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
+--
+-- Estrutura da tabela `pagamento`
+--
+
+CREATE TABLE `pagamento` (
+  `id` int(11) NOT NULL,
+  `valortotal` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `preco` decimal(10,2) NOT NULL,
+  `imagem` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`id`, `nome`, `preco`, `imagem`) VALUES
+(1, 'Xis Bacon', '20.00', 'x-bacon.jpg'),
+(2, 'Ala Minuta', '25.00', 'alaminuta.jpg'),
+(3, 'Hamburguer de Siri', '15.00', 'hamburguer-siri.jpg'),
+(4, 'Strogonoff Vegano', '28.00', 'strogonof-vegano.jpg'),
+(5, 'Pastel de Carne', '10.00', 'pastel-carne.jpg');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `pagamento`
+--
+ALTER TABLE `pagamento`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices para tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `pagamento`
+--
+ALTER TABLE `pagamento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

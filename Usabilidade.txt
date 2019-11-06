@@ -1,0 +1,56 @@
+PTI - USABILIDADE - CODEFOOD
+
+# SESSÃO CLIENTE
+1. Cliente acessa pagina index
+2. Pagina index contem todo o menu do cardapio 
+3. Cliente escolhe seu pedido no menu de cardapio
+4. Sistema mostra o valor do pedido e a quantidade
+
+5. Cliente possui cadastro?
+    5.1. Sim:
+        5.1.1. Sistema apresenta QR-Code referente aos dados bancários de usuário
+        5.1.2. Cliente usa app para confirmar pagamento
+        5.1.3. Cliente 
+        5.1.4. App retorna "Pagamento de {$usuario->$id} efetuado com sucesso!"
+        5.1.5. Sistema retorna "Pagamento de {$usuario->$id} efetuado com sucesso"
+
+    5.2. Não: 
+	    5.2.1. Cliente cai num popup para cadastrar 
+	    5.2.2. Cliente cadastra
+	    5.2.3. Cliente segue com login de cadastro contendo seus dados bancarios
+	    5.2.4. QR-Code acopla registro de usuario
+        5.2.5. Site Web gera QR-Code
+        5.2.6. Cliente usa app para habilitar essa sincronização. 
+        5.2.7. Sistema retorna "Registro efetuado com sucesso!"
+        5.2.8. Sistema retorna para página de confirmação de pedido
+        5.2.9. Cliente clica em "Pedir"
+        5.2.10. Sistema apresenta QR-Code referente aos dados bancários de usuário
+        5.2.11. Cliente usa app para confirmar pagamento
+        5.2.12. App retorna "Pagamento de {$usuario->$id} efetuado com sucesso!"
+        5.2.13. Sistema retorna "Pagamento de {$usuario->$id} efetuado com sucesso"
+
+6. Cliente deseja pedir mais?
+    6.1. Sim: 
+        6.1.1. Cliente volta para o passo "3"
+        6.1.2. Cliente cai direto na condição "5.1" 
+        6.1.3. Repete o ciclo.
+
+    6.2. Não: 
+        6.2.1. Volta para o passo 1
+
+7. Sistema retorna "seu pedido ficara pronto em {$pedido->$tempo_preparo}."
+8. Parte do cliente finalizada. 
+
+# SESSÃO FUNCIONÁRIO
+1. Funcionario acessa página index, tendo acesso ao menu do cardapio
+2. Funcionario procura por opção no rodapé ("Sou Funcionario") - PODERIA SER SUBSTITUIDO PELA OPÇÃO "voce e nosso funcionario"
+3. Funcionario possui login (devido ao bd estatico dos funcionarios, mas é bom fazer uma pagina de cadastro funcionario tbm), então:
+4. Funcionario realiza login 
+5. Sistema retorna função desse funcionario e permissões (mostrar/inserir/localizar/editar/...). 
+
+# SESSÃO FUNCIONÁRIO COZINHEIRO
+cadastra, edita cardapio.
+
+# SESSÃO FUNCIONÁRIO GERENTE
+acesso a quem pagou e valor do pagamento e qr-code.
+vizualiza fechamento do dia, possui novas opções.

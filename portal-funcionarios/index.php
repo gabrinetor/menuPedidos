@@ -24,9 +24,9 @@
             <h3>Sou Funcionario</h3>
 
             <form action="validar_acesso.php" method="POST" id="formLogin">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <input class="newsletter-btn" type="button" value="Subscribe">
+                <input type="email" name="email_func" placeholder="Email">
+                <input type="password" name="senha_func" placeholder="Senha">
+                <input class="newsletter-btn" type="button" value="Login" name="btn-entrar">
             </form><br />
 
             <a href="cadastro_funcionario.php">Cadastro</a>
